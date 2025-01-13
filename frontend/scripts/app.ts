@@ -12,7 +12,7 @@ function App(): React.ReactNode {
     },
     h(Switch, { active: true, onToggle: () => console.log("clicked switch 1") }, "Wi-Fi"),
     h(Switch, { active: false }, "Bluetooth"),
-    h(Switch, { disabled: true }, "Reduced Motion")
+    h(Switch, { disabled: true, onToggle: () => console.log("clicked switch 3") }, "Reduced Motion")
   );
 }
 
