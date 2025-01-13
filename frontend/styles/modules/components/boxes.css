@@ -1,0 +1,28 @@
+[role="group"] {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 3px solid currentColor;
+  color: #fff;
+
+  &.box--circle {
+    border-radius: 1000px;
+  }
+
+  &.box--small {
+    padding: 8px;
+  }
+
+  &.box--big {
+    padding: 40px;
+  }
+}
