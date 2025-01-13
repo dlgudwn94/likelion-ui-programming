@@ -21,6 +21,15 @@ function Switch({ active = false, disabled = false, showOnOffText = false, child
     switchTextNode = h("span", { className: "Switch--text", "aria-hidden": true }, switchText);
   }
 
+  const handleClick = () => {
+    // if (onToggle && typeof onToggle === 'function') {
+    //   onToggle();
+    // }
+
+    // 옵셔널 체이닝을 사용한 함수 실행 여부 조건 처리
+    onToggle?.();
+  };
+
   return h(
     "div",
     {
@@ -30,7 +39,7 @@ function Switch({ active = false, disabled = false, showOnOffText = false, child
       tabIndex: 0,
       className: "Switch",
       // onClick: onToggle,
-      onClick: onToggle,
+      onClick: handleClick,
     },
     h("span", { className: "Switch--label" }, children),
     h("span", { className: "Switch--info" }, h("span", { className: "Switch--knob" }), switchTextNode)
