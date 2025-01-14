@@ -1,13 +1,7 @@
 import React from "../lib/react.js";
 import Switch from "../components/switch.tsx";
 
-const appStyles = {
-  display: "flex",
-  flexFlow: "column",
-  gap: 12,
-  padding: 20,
-};
-
+/* Component ---------------------------------------------------------------- */
 function App(): React.ReactNode {
   const handleSwitch1Toggle = () => console.log("clicked switch 1");
   const handleSwitch3Toggle = () => console.log("clicked switch 3");
@@ -24,5 +18,12 @@ function App(): React.ReactNode {
     </div>
   );
 }
+
+const appStyles = {
+  display: "flex",
+  flexFlow: "column",
+  gap: 12,
+  padding: 20,
+};
 
 export default App;
